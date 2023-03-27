@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacote De Stickers</title>
+
+
+    <script>
+        let adiciona = document.getElementById('adiciona')
+        let diminuir = document.getElementById('diminuir')
+        let control = 0;
+
+        adiciona = document.addEventListener('click', (e) => {
+            let botao = e.target.id
+            if(botao == 'adiciona') {
+               control ++;
+            let text = document.getElementById('cont').innerHTML = control; 
+            } if (botao == 'diminuir') {
+                control --;
+                let text = document.getElementById('cont').innerHTML = control; 
+            }
+        })
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                Formulário para compra de Stickers
+            </h1>
+        </div>
+
+        <div class="opcao">
+            <p>Quais Stickers?</p>
+        </div>
+
+        <div class="checkbox">
+            <div>
+                <input type="checkbox" class="check">
+                <label>React</label>
+            </div>
+            <div>
+                <input type="checkbox" class="check">
+                <label>Vue</label>
+            </div>
+            <div>
+                <input type="checkbox" class="check">
+                <label>Angular</label>
+            </div>
+        </div>
+
+        <div class="opcao">
+            <p>Quantos stickers de cada?</p>
+        </div>
+
+        <div>
+            <main>
+                <section class="container bg-info text-center padding">
+                    <button id="diminuir"class="btn btn-success">-</button>
+                    <h1 id="cont">0</h1>
+                    <button id="adiciona" class="btn btn-success">+</button>
+
+                </section>
+            </main>
+            
+
+
+
+        </div>
+
+        <div class="opcao">
+            <p>observações:</p>
+        </div>
+
+        <div>
+            <input type="text" class="check">
+        </div>
+
+        <div>
+             <button id="btnEnviar">Enviar</button>
+        </div>
+       
+
+        <script>
+            let checkbox = document.querySelectorAll('.check')
+            let btnEnviar = document.querySelector('#btnEnviar')
+           
+            btnEnviar.addEventListener('click', (e)=>{
+                alert('Pedido enviado')
+            })
+        </script>
+
+    </div>
+
+    <!-- <script src="Stickers.js"></script>
+    <script src="StickersController.js"></script>
+    <script src="StickersView.js"></script>
+    <script>
+        let controller = new StickersController();
+    </script> -->
+    
+</body>
+</html>
