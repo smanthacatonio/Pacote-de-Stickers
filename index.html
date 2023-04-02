@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="styles.css">
 
 
-    <script>
+    <!-- <script>
         let adiciona = document.getElementById('adiciona')
-        let diminuir = document.getElementById('diminuir')
         let control = 0;
 
         adiciona = document.addEventListener('click', (e) => {
@@ -23,7 +22,7 @@
                 let text = document.getElementById('cont').innerHTML = control; 
             }
         })
-    </script>
+    </script> -->
 
 </head>
 <body>
@@ -58,19 +57,14 @@
             <p>Quantos stickers de cada?</p>
         </div>
 
-        <div>
-            <main>
-                <section class="container bg-info text-center padding">
-                    <button id="diminuir"class="btn btn-success">-</button>
-                    <box id="cont">0</box>
-                    <button id="adiciona" class="btn btn-success">+</button>
-
-                </section>
-            </main>
+        <div class="container text-center padding" id="quantidade">
+                <button id="diminuir"class="btn btn-success">-</button>
+                <box id="cont">0</box>
+                <button id="adiciona" class="btn btn-success">+</button>
 
         </div>
 
-        <div class="opcao">
+        <div class="opcao" id="observacao">
             <p>Observações:</p>
         </div>
 
@@ -83,14 +77,22 @@
         </div>
        
 
-        <script>
-            let checkbox = document.querySelectorAll('.check')
+        <!-- <script>
             let btnEnviar = document.querySelector('#btnEnviar')
            
             btnEnviar.addEventListener('click', (e)=>{
                 alert('Pedido enviado')
             })
-        </script>
+        </script> -->
+
+    <script src="./StickersModel.js"></script>
+    <script src="./StickersView.js"></script>
+    <!-- <script src="./StickersController.js"></script> -->
+    <script src="./StickersContr.js"></script>
+    
+    <script>
+        let controller = new StickersContr();
+    </script>
 
     </div>
     
