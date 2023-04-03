@@ -12,11 +12,17 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>
+            <div class="cabecalho">
+ <h1>
                 Formulário<br/> para compra de <br/> 
                 <span>Pacote de Stickers</span>
             </h1>
+            </div>
+
+           
         </div>
+
+        
 
         <div class="opcao">
             <p>Quais Stickers?</p>
@@ -45,21 +51,21 @@
         </div>
 
         <div class="container text-center padding" id="quantidade">
-                <button id="diminuir"class="btn btn-success">-</button>
+                <button id="diminuir"class="quantidade">-</button>
                 <box id="cont">0</box>
-                <button id="adiciona" class="btn btn-success">+</button>
+                <button id="adiciona" class="quantidade">+</button>
 
         </div>
 
         <div class="opcao" id="observacao">
             <p>Observações:</p>
-            <textarea name="" id="textArea" cols="30" rows="10"></textarea>
+            <textarea name="observacao" id="textoObs" placeholder="- Gostaria de stickers 3x2cm. - Com papel especial laminado. - Manda um beijo pro Julio!"></textarea>
         </div>
 
         <div class="enviarForm">
-            <div id="mensagem">
+            <!-- <div id="mensagem">
                 <p>Formulario Enviado com sucesso</p>
-            </div>
+            </div> -->
             <div class="btnEnviar">
                 <button id="btnEnviar">ENVIAR</button>
             </div>            
