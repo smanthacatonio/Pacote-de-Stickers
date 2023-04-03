@@ -1,4 +1,4 @@
-class StickersContr {
+class StickersController {
     constructor() {
         this.bind();
     }
@@ -37,9 +37,11 @@ class StickersContr {
     }
 
     enviar() {
-        let quantidade = parseInt(document.querySelector('#quantidade box').textContent);
-           
-                alert('Pedido enviado com ${quantidade} stickers');
+        let btnEnviar = document.querySelector('#btnEnviar')
+       
+        btnEnviar.addEventListener('click', (e)=>{
+            alert('Pedido enviado com sucesso')
+        })
     }
 
     init() {
@@ -49,12 +51,3 @@ class StickersContr {
     }
 
 }
-
-
-// enviar() {
-//     let btnEnviar = document.querySelector('#btnEnviar')
-       
-//         btnEnviar.addEventListener('click', (e)=>{
-//             alert('Pedido enviado com $(quantidade) stickers')
-//         })
-// }

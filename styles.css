@@ -4,22 +4,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 } */
 
-h1 {
+body {
+    background: rebeccapurple;
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+}
+
+.container{
+    background-color: #F2F2F2;
+    border: 1px solid #979797;
+    box-shadow: 10px 22px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 560px;
+    height: 794px;
+    top: 112px;
+    left: 62px;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 23px;
     color: white;
     background-color: #2F3676;
+}
 
+h1 span{
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #2F3676;
 }
 
 p{
-    font-family: 'Inter', sans-serif;
     font-size: 18px;
     color: #071723;
 }
 
 label {
-    font-family: 'Inter', sans-serif;
     font-size: 14px;
     color: #071723;
 }
@@ -54,50 +73,79 @@ button:hover {
     background-color: #191847;
 }
 
-
-
-
-
-/* input[type="checkbox"] {
-    display: none;
+.wrapper{
+    padding: 30px;
 }
 
-label {
-    display: inline-block;
-    position: relative;
-    padding-left: 25px;
-    margin-right: 10px;
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    padding-left: 10px;
     cursor: pointer;
 }
 
-label::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #2F3676;
+.checkbox1 {
+    appearance: none;
+    background: #2F3676;
+    width: 30px;
+    height: 30px;
+    outline: none;
     border: 2px solid #2F3676;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-input[type="checkbox"]:checked + label::before {
-    background-color: #2F3676;
-}
-
-label::after {
-    content: "\2713";  código Unicode para o caractere check 
-    display: inline-block;
+.checkbox1:before {
+    content: '';
     position: absolute;
-    left: 5px;
-    top: 1px;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    visibility: hidden;
+    height: 12px;
+    width: 7px;
+    opacity: 0;
+    transition: all 100ms ease-in-out;
+
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+    top: 2px;
 }
 
-input[type="checkbox"]:checked + label::after {
-    visibility: visible;
+.checkbox1:checked:before {
+    opacity: 1;
+}
+.checkbox1:focus {
+    box-shadow: 0 0 5px #2F3676;
+}
+.checkbox1:hover {
+    background-color: #191847;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* observacao {
+    background: #DDE3E9;
+border: 1px solid #2F3676;
+border-radius: 4px;
+
+border: 1px solid red;
+
+}
+
+enviar {
+
+
 } */
+
+
+
