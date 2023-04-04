@@ -22,10 +22,13 @@ class StickersController {
 
     diminuir(){
         let quantidade = parseInt(document.querySelector('#quantidade box').textContent);
+        
         if (quantidade <= 0) {
-           document.querySelector('#diminuir').disabled = true;
-           document.querySelector('#diminuir').classList.add('erro');
+            document.querySelector('#diminuir').disable = true;
+            return;
         }
+
+        document.querySelector('#diminuir').classList.remove('desabilitado');
         quantidade--;
         document.querySelector('#quantidade box').textContent = quantidade;
     }
@@ -37,17 +40,30 @@ class StickersController {
     }
 
     enviar() {
-        let btnEnviar = document.querySelector('#btnEnviar')
+        let texto = document.querySelector('#textoObs').value;
+        let qtd = parseInt(document.querySelector('#cont').textContent);
+
+        let sticker = document.getElementsByName('tipo');
+        let stickerSelecionado;
+        for(let i = 0; i < sticker.length; i++) {
+            if(sticker[i].checked) {
+                stickerSelecionado = sticker[i].nextElementSibling.textContent;
+                break;
+            }
+        }
+
+        let novaModel = new StickersModel(stickerSelecionado, qtd, texto);
+        let novaView = new VisualViewport(novaModel);
+        document.querySelector('#mensagem').innerHTML = novaView.template();
+        this.init();
+
        
-        btnEnviar.addEventListener('click', (e)=>{
-            alert('Pedido enviado com sucesso')
-        })
     }
 
     init() {
-        document.querySelector('#check').value = "";
+        document.querySelector('#checkbox1').value = "";
         document.querySelector('#quantidade box').textContent = 0;
-        document.querySelector('#textArea').value = "";
+        document.querySelector('#textoObs').value = "";
     }
 
 }
