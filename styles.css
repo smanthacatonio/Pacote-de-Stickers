@@ -4,6 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 } */
 
+
 body {
     background: rebeccapurple;
     font-family: 'Inter', sans-serif;
@@ -15,83 +16,76 @@ body {
     box-shadow: 10px 22px 24px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     width: 560px;
-    height: 794;
+    height: 794px;
     margin: 20px auto;
 }
 
-.cabecalho {
+h1 {
+    font-weight: normal;
+    font-size: 23px;
+    color: #FFFFFF;
+    margin-left: 32px;
+    letter-spacing: 2px;
+}
+
+h1 span{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.46px;
+    letter-spacing: 0px;
+}
+/* 
+.header{
+    border-radius: 8px;
+    padding: 0;
+    width: 560px;
+    height: 190px;
+    flex-direction: row;
+} */
+
+.header {
     background-color: #2F3676;
     background-size: cover;
     width: 562px;
-    height: 182px;
+    height: 150px;
     position: absolute;
     top: 0;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 90%;
+    border-bottom-right-radius: 90%;
     margin-top: 20px;
     margin-left: -1px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
-h1 {
-    font-weight: 300;
-    font-size: 23px;
-    color: #FFFFFF;
+img {
+    margin-left: 350px;
+    margin-top: -110px;
+    size: 90%;
 
-}
-
-h1 span{
-    font-weight: bold;
-    font-size: 24px;
+    width: 130px;
+    height: 130px;
 }
 
 p{
     font-size: 18px;
     color: #071723;
     height: 22px;
-    margin-left: 32px;
+    margin: 32px 32px 15px 32px;
+    font-weight: 600;
 }
 
-/* 
-label {
-    font-size: 14px;
-    color: #071723;
-} */
-
-button {
-    background-color: #2F3676;
-    cursor: pointer;
-    border-radius: 7px;
-    height: 37px;
-    width: 133px;
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-#cont {
-    background-color:#DDE3E9;
-    border: 1px solid #2F3676;
-    font-family: 'Inter', sans-serif;
-    
-    font-size: 18px;
-    border-radius: 4px;
-    /* height: 42px;
-    width: 60px; */
-}
-
-button:hover {
-    background-color: #191847;
+.quais{
+    margin-top: 215px;
 }
 
 .wrapper{
-    padding: 30px;
+    margin-left: 32px;
+    margin-top: 15px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
@@ -112,7 +106,6 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .checkbox1:before {
@@ -132,21 +125,69 @@ button:hover {
 .checkbox1:checked:before {
     opacity: 1;
 }
+
 .checkbox1:focus {
     box-shadow: 0 0 5px #2F3676;
 }
+
 .checkbox1:hover {
     background-color: #191847;
     cursor: pointer;
 }
 
+button {
+    background-color: #2F3676;
+    cursor: pointer;
+    border-radius: 7px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
 
-.enviarForm {
-    padding: 32px;
-    background: #dde3e9;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 32px;
+button:hover {
+    background-color: #191847;
+}
+
+.quantidade{
+    height: 37px;
+    width: 50px;
+    font-size: 25px;
+    align-items: center;
+}
+
+.quantidade#diminuir{
+    margin-left: 32px;
+}
+
+/* .invalid {
+    background-color: #F59393;
+    border: 1px solid #F33232;
+} */
+
+/* .error {
+    font-size: 12px;
+    background-color: #F33232;
+} */
+
+/* .error-hidden{
+    display: none;
+} */
+
+#cont {
+    background-color:#DDE3E9;
+    border: 1px solid #2F3676;
+    border-radius: 4px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+
+    padding: 5px;
+    height: 42px;
+    width: 60px;
+    margin: 0 8px 0 8px;
+    box-sizing: border-box;
 }
 
 #textoObs{
@@ -160,4 +201,26 @@ button:hover {
     color: #071723;
     font-size: 14px;
     font-weight: 400;
+}
+
+.enviarForm {
+    padding: 32px;
+    background: #dde3e9;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
+
+#btnEnviar{
+    height: 37px;
+    width: 133px;
+    font-size: 18px;
+}
+
+#mensagem{
+    font-size: 18px;
+    font-weight: 500;
+    color: #00C57C;
+    display: flex;
+    align-items: center;
 }

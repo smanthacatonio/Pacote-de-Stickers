@@ -8,8 +8,8 @@ class StickersController {
             this.diminuir();
         });
 
-        document.querySelector('#adiciona').addEventListener('click', (e)=>{
-            this.adicionar();
+        document.querySelector('#aumentar').addEventListener('click', (e)=>{
+            this.aumentar();
         });
 
         document.querySelector("#btnEnviar").addEventListener('click', (e) => {
@@ -23,14 +23,14 @@ class StickersController {
     diminuir(){
         let quantidade = parseInt(document.querySelector('#quantidade box').textContent);
         if (quantidade <= 0) {
-            alert("Não é possível inserir número negativo");
-            return;
+           document.querySelector('#diminuir').disabled = true;
+           document.querySelector('#diminuir').classList.add('erro');
         }
         quantidade--;
         document.querySelector('#quantidade box').textContent = quantidade;
     }
 
-    adicionar(){
+    aumentar(){
         let quantidade = parseInt(document.querySelector('#quantidade box').textContent);
         quantidade++;
         document.querySelector('#quantidade box').textContent = quantidade;
