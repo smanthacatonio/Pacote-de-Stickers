@@ -53,7 +53,7 @@ class StickersController {
         }
 
         let novaModel = new StickersModel(stickerSelecionado, qtd, texto);
-        let novaView = new VisualViewport(novaModel);
+        let novaView = new StickersView(novaModel);
         document.querySelector('#mensagem').innerHTML = novaView.template();
         this.init();
 
@@ -62,7 +62,7 @@ class StickersController {
 
     init() {
         document.querySelector('#checkbox1').value = "";
-        document.querySelector('#quantidade box').textContent = 0;
+        document.querySelector('#cont').textContent = 0;
         document.querySelector('#textoObs').value = "";
     }
 

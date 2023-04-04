@@ -5,7 +5,7 @@ class StickersView {
 
     template() {
         return `
-        <p class="mensagemSucesso">Formulario enviado com sucesso"</p>
+        <p id="mensagem">Formulario enviado com sucesso!</p>
         `
     }
 }
