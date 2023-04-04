@@ -221,6 +221,7 @@ button:hover {
     height: 37px;
     width: 133px;
     font-size: 18px;
+    margin-top: 32px;
 }
 
 .desativado{
@@ -237,10 +238,11 @@ button:hover {
     font-size: 18px;
     font-weight: 500;
     color: #00C57C;
-    display: flex;
-    align-items: center;
-    align-content: left;
     width: 291px;
     height: 22px;
+
+    display: flex;
+    align-items: center;
+    align-content: left;   
     margin-left: 32px;
 }

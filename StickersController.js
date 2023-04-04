@@ -16,7 +16,7 @@ class StickersController {
             this.enviar();
         });
 
-        this.init();
+        // this.init();
 
     }
 
@@ -25,6 +25,8 @@ class StickersController {
         
         if (quantidade <= 0) {
             document.querySelector('#diminuir').disable = true;
+            document.querySelector('#diminuir').classList.add('desabilitado');
+            document.querySelector('#btnEnviar').classList.add('desativado');
             return;
         }
 
@@ -35,8 +37,10 @@ class StickersController {
 
     aumentar(){
         let quantidade = parseInt(document.querySelector('#quantidade box').textContent);
+        document.querySelector('#diminuir').classList.remove('desabilitado');
+        document.querySelector('#btnEnviar').classList.remove('desativado');
         quantidade++;
-        document.querySelector('#quantidade box').textContent = quantidade;
+        document.querySelector('#quantidade box').textContent = quantidade;        
     }
 
     enviar() {
@@ -55,15 +59,15 @@ class StickersController {
         let novaModel = new StickersModel(stickerSelecionado, qtd, texto);
         let novaView = new StickersView(novaModel);
         document.querySelector('#mensagem').innerHTML = novaView.template();
-        this.init();
+        // this.init();
 
        
     }
 
-    init() {
-        document.querySelector('#checkbox1').value = "";
-        document.querySelector('#cont').textContent = 0;
-        document.querySelector('#textoObs').value = "";
-    }
+    // init() {
+    //     document.querySelector('#checkbox1').value = "";
+    //     document.querySelector('#cont').textContent = 0;
+    //     document.querySelector('#textoObs').value = "";
+    // }
 
 }
