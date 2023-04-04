@@ -16,7 +16,7 @@ class StickersController {
             this.enviar();
         });
 
-        // this.init();
+        this.init();
 
     }
 
@@ -27,6 +27,7 @@ class StickersController {
             document.querySelector('#diminuir').disable = true;
             document.querySelector('#diminuir').classList.add('desabilitado');
             document.querySelector('#btnEnviar').classList.add('desativado');
+            document.querySelector('#cont').classList.add('erro');
             return;
         }
 
@@ -60,15 +61,17 @@ class StickersController {
         let novaModel = new StickersModel(stickerSelecionado, qtd, texto);
         let novaView = new StickersView(novaModel);
         document.querySelector('#mensagem').innerHTML = novaView.template();
-        // this.init();
+        this.init();
 
        
     }
 
-    // init() {
-    //     document.querySelector('#checkbox1').value = "";
-    //     document.querySelector('#cont').textContent = 0;
-    //     document.querySelector('#textoObs').value = "";
-    // }
+    init() {
+        document.querySelectorAll('.checkbox1').forEach((e) => {
+            e.checked = false;
+        });
+        document.querySelector('#cont').textContent = 0;
+        document.querySelector('#textoObs').value = "";
+    }
 
 }
