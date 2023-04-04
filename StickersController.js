@@ -39,6 +39,7 @@ class StickersController {
         let quantidade = parseInt(document.querySelector('#quantidade box').textContent);
         document.querySelector('#diminuir').classList.remove('desabilitado');
         document.querySelector('#btnEnviar').classList.remove('desativado');
+        document.querySelector('#cont').classList.remove('erro');
         quantidade++;
         document.querySelector('#quantidade box').textContent = quantidade;        
     }

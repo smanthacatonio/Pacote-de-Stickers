@@ -164,20 +164,6 @@ button:hover {
     border: 1px solid #C5CFD6;
 }
 
-/* .invalid {
-    background-color: #F59393;
-    border: 1px solid #F33232;
-} */
-
-/* .error {
-    font-size: 12px;
-    background-color: #F33232;
-} */
-
-/* .error-hidden{
-    display: none;
-} */
-
 #cont {
     background-color:#DDE3E9;
     border: 1px solid #2F3676;
@@ -193,6 +179,11 @@ button:hover {
     width: 60px;
     margin: 0 8px 0 8px;
     box-sizing: border-box;
+}
+
+#cont.erro {
+    background-color:#F59393;
+    border: 1px solid #F33232;
 }
 
 #textoObs{
