@@ -190,6 +190,7 @@ button:hover {
     color: #071723;
     font-size: 14px;
     font-weight: 400;
+    padding: 16px;
 }
 
 .enviarForm {
